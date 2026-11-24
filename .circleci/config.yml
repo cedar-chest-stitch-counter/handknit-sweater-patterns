@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  box_uptime:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run:
+          name: show uptime
+          command: uptime
+workflows:
+  main:
+    jobs:
+      - box_uptime
